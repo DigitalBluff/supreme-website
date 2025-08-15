@@ -1,0 +1,5 @@
+Version 1.1
+* Fixed: Sending email through contact form
+
+Version 1.0
+Release
