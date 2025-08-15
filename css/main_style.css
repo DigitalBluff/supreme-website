@@ -6369,13 +6369,14 @@ button,
    text-align:center;
    font-weight:600;
     letter-spacing: 0;
-    font-size: 16px;
-    padding: 0 25px;
-    height: 46px;
-    line-height: 44px;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 36px;
+    line-height: 34px;
     overflow: hidden;
     box-sizing: padding-box !important;
     text-transform: uppercase;
+    border-radius: 6px;
 }
 .sc_button { vertical-align: middle; }
 .sc_button.sc_button_round {
@@ -6421,7 +6422,7 @@ input[type="button"],
 button,
 .sc_button {
    background-color: transparent;
-    border: 3px solid #eeba00;
+    border: 2px solid #eeba00;
    color: #eeba00;
 }
 
