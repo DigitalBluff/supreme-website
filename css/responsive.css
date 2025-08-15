@@ -8,6 +8,12 @@
 Apple iPhone 5, 5S & 5C
 Apple iPod Touch (5th generation)
 */
+@media (max-width: 767px) {
+    .calculator_bg1 {
+      background-image: none !important;
+    }
+  }
+  
 @media (min-width: 1280px) and (max-width: 1439px) {
     h1 { font-size:56px; }
     h2 { font-size:46px; }
@@ -723,16 +729,24 @@ Samsung Galaxy
     .widget_area .widget_socials .logo_descr { margin-top: 15px; }
     .widget_area .widget_socials .logo_info { margin: 5px 0 0 0; }
     .widget_area .post_item .post_thumb { height: 50px; margin: 0 10px 5px 0; width: 60px; }
-    .widget_area .widget_product_tag_cloud a, .widget_area .widget_tag_cloud a { padding: 3px 9px; }
+    .widget_area .widget_product_tag_cloud a, .widget_area .widget_tag_cloud a { padding: 3px 9px; margin: 0 5px 5px 0; }
     .widget_area .post_item .post_title { margin: -5px 0 2px; }
     .widget_area .widget_flickr .flickr_badge_image { width: 23%; }
     .widget_area .widget_socials .logo .logo_text { font-size: 22px; line-height: 28px; }
     .widget_area .widget_socials .sc_socials { margin-top: 20px; }
+    .widget_area .widget_calendar #calendar_wrap { padding: 0; }
+    .breadcrumbs .breadcrumbs_delimiter { margin: 0 6px 0 7px; }
 
-    /* Shortcodes */
-    .sc_skills_pie_2 .sc_skills_total { font-size: 40px; }
-    .sc_tabs.sc_tabs_style_2 .sc_tabs_titles { width: 22%; }
-    .sc_countdown.sc_countdown_style_1 .sc_countdown_item + .sc_countdown_item { margin-left: 25px; }
+	/* Shortcodes */
+	.sc_slider, .sc_slider .swiper_slide {
+		max-height:210px;
+	}
+    .sc_testimonials {
+        padding-bottom: 40px;
+    }
+    .sc_countdown.sc_countdown_style_1 .sc_countdown_item + .sc_countdown_item {
+        margin-left: 5px;
+    }
     .sc_testimonials .sc_testimonial_avatar { margin: 0 30px 10px 0; }
     .sc_team .sc_team_item .sc_team_item_info { padding: 20px 5px 10px; }
     .sc_price_block .sc_price_block_money .sc_price_money { font-size: 34px; }
@@ -1050,8 +1064,8 @@ Samsung Galaxy
 	.gallery.gallery-columns-6 .gallery-item {	width: 33.3333% !important; }
 	.gallery.gallery-columns-5 .gallery-item {	width: 33.3333% !important; }
 	.gallery.gallery-columns-4 .gallery-item {	width: 33.3333% !important; }
-
-
+	.gallery.gallery-columns-3 .gallery-item {	width: 33.3333% !important; }
+	
 	/* Posts layouts */
     .post_item_related .post_content_wrap { padding: 5px; }
     .post_item_related .post_title { font-size: 14px; line-height: 18px; }
@@ -1217,11 +1231,7 @@ Samsung Galaxy
     .sc_countdown.sc_countdown_style_1 .sc_countdown_item + .sc_countdown_item {
         margin-left: 5px;
     }
-    .sc_testimonials .sc_testimonial_avatar {
-        height: 100px;
-        width: 100px;
-        margin-right: 20px;
-    }
+    .sc_testimonials .sc_testimonial_avatar { margin: 0 30px 10px 0; }
     .sc_testimonial_content {
         font-size: 16px;
         line-height: 24px;
@@ -2404,4 +2414,10 @@ Very common low res
     }
     .sc_team .sc_team_item .sc_team_item_info {
     }
-}*/
+}
+
+@media (max-width: 767px) {
+	.calculator_bg1 {
+		background-image: none !important;
+	}
+}
