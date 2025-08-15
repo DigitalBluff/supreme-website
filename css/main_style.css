@@ -6,7 +6,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*
-Theme Name: Global Logistics
+Theme Name: Supreme Urban Logistics
 Author: themerex
 Author URI: http://themerex.net/
 Version: 1.0
@@ -795,7 +795,6 @@ footer > [class*="container"] {padding-top: 80px; padding-bottom: 40px;}
 .columns_wrap.columnsFloat  {
     margin-right: 0;
 }
-
 /* Utils */
 .clearfix:before,
 .clearfix:after,
@@ -1991,7 +1990,7 @@ header .sidebar_cart .widget_shopping_cart_content .cart_list li a.remove {
     border-bottom: 1px solid transparent;
     line-height: 14px;
 }
-.menu_user_wrap .menu_user_nav > li li {
+.menu_user_wrap .menu_user_nav > li ul li {
    padding: 0 30px 0 0;
     line-height: 24px;
 }
@@ -3982,11 +3981,6 @@ blockquote.sc_quote.style_2 {
    opacity: 1;
    filter: alpha(opacity=100);
 }
-.post_featured .post_nav:hover .post_nav_prev:hover:before {
-   opacity: 0;
-   filter: alpha(opacity=0);
-   left: -60px;
-}
 .post_featured .post_nav:hover .post_nav_next:hover:before {
    opacity: 0;
    filter: alpha(opacity=0);
@@ -4691,7 +4685,7 @@ blockquote.sc_quote.style_2 {
    top:0;
 }
 .widget_area a,
-.widget_area ul li a:hover,
+.widget_area ul li:before,
 .widget_area button:before {
    color: #404856;
 }
@@ -6365,8 +6359,6 @@ iframe[name="google_conversion_frame"] { height:1px; min-height:0px; display:non
 .sc_audio.sc_audio_info {
     background: #eeba00;
 }
-
-
 /* Button
 -------------------------------------------------------------- */
 input[type="submit"],
@@ -7185,7 +7177,6 @@ button:hover,
 .bg_tint_light .sc_countdown.sc_countdown_style_1 .sc_countdown_label {
     color: #909090;
 }
-
 /* Countdown Style 2 */
 .sc_countdown.sc_countdown_style_2 .sc_countdown_digits,
 .sc_countdown.sc_countdown_style_2 .sc_countdown_separator {
@@ -7960,8 +7951,6 @@ p + ul.sc_list_style_iconed {margin-top: 40px;}
 .sc_price_block.sc_price_block_style_2 .sc_price_block_head {
     background-color:#404856;
 }
-
-
 /* Scroll
 -------------------------------------------------------------- */
 .sc_scroll {
@@ -9571,9 +9560,6 @@ p + ul.sc_list_style_iconed {margin-top: 40px;}
 .sc_tabs.sc_tabs_style_3 .sc_tabs_titles li.ui-state-active a {
     color: #eeba00;
 }
-
-
-
 /* Team
 -------------------------------------------------------------- */
 .sc_team .sc_team_item {
@@ -9581,9 +9567,6 @@ p + ul.sc_list_style_iconed {margin-top: 40px;}
    /*margin-bottom:30px;*/
    margin-bottom:10px;
     text-align: center;
-}
-.sc_team .sc_team_item .sc_team_item_avatar {
-    display: block;
 }
 .sc_team .sc_team_item .sc_team_item_info {
     padding: 30px 15px 15px;
@@ -10042,7 +10025,7 @@ background-color: #fff;
     padding-top: 5px;
 }
 
-.testimonals_section .sc_section_overlay {background-color: rgba(54,130,182,0.4);}
+.testimonals_section .sc_section_overlay {background-color: rgba(22, 82, 82, 0.9);}
 .testimonals_section .subtitle_container, .testimonals_section .sc_title_regular {color: #fff;}
 .testimonals_section .subtitle_container+.sc_title_regular {margin-top: 158px; margin-bottom: 67px;}
 .testimonals_section .sc_content > .subtitle_container {margin-bottom: 100px;}
@@ -10353,8 +10336,6 @@ background-color: #fff;
    margin-left:2em;
    border:1px solid #e4e7e8;
 }
-
-
 /* Tooltip
 -------------------------------------------------------------- */
 .sc_tooltip_parent {
