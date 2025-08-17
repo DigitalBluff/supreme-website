@@ -1,5 +1,132 @@
 /* CSS-file with custom styles - don't delete this comment */
 
+/* Homepage section layout tuning */
+
 body {
     font-size: 20px;
+}
+
+/* Tighter bottom spacing for the services section */
+.services_section .sc_content.container {
+    padding-bottom: 0px;
+}
+
+/* Internal paddings in services tabs */
+.services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_wrap {
+    padding: 80px 60px 120px 0 !important; /* was 35px 60px 300px 0 */
+    margin: 0 60px 0 0 !important;
+}
+.services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_content {
+    padding: 80px 80px 40px 0 !important; /* was 200px 70px 50px 0 */
+}
+.services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_titles {
+    margin: 80px 0 0 !important; /* was 125px top */
+}
+
+/* Make embedded maps non-interactive by default */
+/* Map interactivity restored by default; no pointer-events override */
+
+/* Contact section layout tuning */
+.contact_section .sc_contact_form_title {
+    margin-bottom: 0px;
+}
+.contact_section .sc_contact_quicklinks .sc_section p {
+    margin: 14px 0;
+}
+.contact_section .sc_contact_quicklinks .sc_button.sc_button_style_filled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    min-width: 260px;
+    max-width: 360px;
+    padding: 12px 16px;
+}
+.contact_section .sc_contact_form .sc_contact_info { margin-bottom: 0px; }
+.contact_section .sc_contact_form .sc_contact_form_address_wrap { margin-top: 12px; }
+.contact_section .sc_contact_form .sc_contact_form_address_field { margin: 6px 0; }
+.contact_section .sc_socials {
+    margin-top: 18px;
+}
+.contact_section .sc_socials .sc_socials_item {
+    margin-right: 10px;
+}
+
+/* Contact section custom background (hero green) */
+.contact_section {
+    background-color: #165252; /* matches provided swatch */
+    color: #ffffff;
+}
+
+/* Reduce bottom padding and make left/right columns fit space better */
+.contact_section .sc_section_content,
+.contact_section .sc_content.container {
+    padding-bottom: 8px !important;
+    padding-top: 12px !important;
+}
+.contact_section .sc_contact_form {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+.contact_section .sc_contact_form_left { flex: 1 1 44%; }
+.contact_section .sc_contact_form_right { flex: 1 1 44%; }
+
+/* Trim legacy paddings/margins from theme that add extra space */
+.contact_section .sc_contact_form_left { padding: 30px !important; margin: 0 40px 0 0 !important; }
+.contact_section .sc_contact_form_right { padding: 30px !important; margin-right: 0 !important; }
+.sc_contact_form_title {
+    padding-bottom: 20px;
+    margin-bottom: 34px;
+}
+
+/* Force-trim any inherited large paddings/margins inside this section */
+.contact_section { padding-top: 0 !important; padding-bottom: 0 !important; margin: 0 !important; }
+.contact_section .container-fluid,
+.contact_section .container { padding-top: 0 !important; padding-bottom: 0 !important; }
+.contact_section .sc_section,
+.contact_section .sc_section_overlay {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.contact_section .sc_contact_form { margin: 0 !important; padding: 10px 0 10px !important; }
+
+/* Tweak on smaller screens */
+@media (max-width: 991px) {
+    .contact_section .sc_contact_form {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .contact_section .sc_contact_quicklinks .sc_button.sc_button_style_filled {
+        width: 100%;
+        min-width: 0;
+    }
+    .contact_section .sc_contact_form_left .sc_contact_form_title { white-space: nowrap; }
+
+    /* Slightly reduce inner padding to tighten stacked layout */
+    .contact_section .sc_contact_form_left,
+    .contact_section .sc_contact_form_right { padding: 16px !important; }
+}
+
+/* Fix awkward layout at medium widths by stacking and hiding the divider */
+@media (max-width: 1000px) {
+    .contact_section .sc_contact_form {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .contact_section .sc_contact_form_left,
+    .contact_section .sc_contact_form_right {
+        flex: 1 1 100%;
+    }
+    .contact_section .sc_contact_form_left .sc_contact_info:before,
+    .contact_section .sc_contact_form_left .sc_contact_info:after {
+        display: none !important;
+        content: none !important;
+    }
+    .contact_section .sc_contact_quicklinks .sc_button.sc_button_style_filled {
+        width: 100%;
+        max-width: 480px;
+    }
 }
