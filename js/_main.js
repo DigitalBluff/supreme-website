@@ -119,6 +119,7 @@ jQuery(document).ready(function() {
     timeline_init();
     custom_options();
     themerex_contact_form_send();
+    services_mobile_scroll();
 });
 
 
@@ -131,6 +132,45 @@ function mainmenu_init() {
         THEMEREX_GLOBALS['menu_fixed']       = false;
 
     }     
+}
+
+/* Services tabs: on mobile, scroll to selected content */
+function services_mobile_scroll() {
+    "use strict";
+    var isMobile = function() {
+        return (window.matchMedia && window.matchMedia('(max-width: 767px)').matches) || jQuery(window).width() <= 767;
+    };
+    var guardScrolling = false;
+
+    // Scroll when the tab actually activates (reliable first-click behavior)
+    jQuery(document).on('tabsactivate', '.services_section .sc_tabs', function(event, ui) {
+        if (!isMobile()) return;
+        if (guardScrolling) return;
+        var $panel = ui && ui.newPanel ? ui.newPanel : null;
+        if (!$panel || $panel.length === 0) return;
+        guardScrolling = true;
+        jQuery('html, body').stop(true);
+        var offset = Math.max(0, $panel.offset().top - 80);
+        setTimeout(function() {
+            jQuery('html, body').animate({ scrollTop: offset }, 400, function(){ guardScrolling = false; });
+        }, 10);
+    });
+
+    // Fallback: if tabsactivate isn't triggered by the theme, scroll shortly after click
+    jQuery(document).on('click', '.services_section .sc_tabs_titles a', function() {
+        if (!isMobile()) return;
+        if (guardScrolling) return;
+        var target = jQuery(this).attr('href');
+        if (!(target && target.charAt(0) === '#')) return;
+        var $el = jQuery(target);
+        if ($el.length === 0) return;
+        guardScrolling = true;
+        setTimeout(function(){
+            jQuery('html, body').stop(true);
+            var offset = Math.max(0, $el.offset().top - 80);
+            jQuery('html, body').animate({ scrollTop: offset }, 400, function(){ guardScrolling = false; });
+        }, 200);
+    });
 }
 
 

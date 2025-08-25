@@ -13,7 +13,7 @@ body {
 
 /* Internal paddings in services tabs */
 .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_wrap {
-    padding: 80px 60px 120px 0 !important; /* was 35px 60px 300px 0 */
+    padding: 80px 60px 60px 0 !important; /* was 35px 60px 300px 0 */
     margin: 0 60px 0 0 !important;
 }
 .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_content {
@@ -21,6 +21,112 @@ body {
 }
 .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_titles {
     margin: 80px 0 0 !important; /* was 125px top */
+}
+
+/* Tighter spacing between tabs and content on mobile only */
+@media (max-width: 767px) {
+    .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_wrap {
+        padding: 28px 16px 20px 0 !important;
+        margin: 0 16px 0 0 !important;
+    }
+    .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_titles {
+        margin: 14px 0 0 !important;
+    }
+    .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_content {
+        padding: 16px 16px 50px 0 !important;
+    }
+}
+
+/* Mobile menu overlay */
+.mobile_nav_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+    z-index: 10000;
+}
+.mobile_menu_open .mobile_nav_overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile_nav_panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 86%;
+    max-width: 360px;
+    height: 100%;
+    background: #165252;
+    color: #fff;
+    transform: translateX(100%);
+    transition: transform 220ms ease;
+    box-shadow: -8px 0 24px rgba(0,0,0,0.3);
+    padding: 18px 16px 24px;
+}
+.mobile_menu_open .mobile_nav_panel {
+    transform: translateX(0);
+}
+.mobile_nav_close {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    padding: 8px;
+}
+.mobile_nav_inner ul {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+.mobile_nav_inner li { margin: 0; padding: 0; }
+.mobile_nav_inner a {
+    display: block;
+    padding: 14px 8px;
+    color: #fff;
+    text-decoration: none;
+}
+.mobile_nav_inner li.current-menu-item > a { background: rgba(255,255,255,0.08); border-radius: 6px; }
+
+/* Use hamburger on mobile across all pages */
+@media (max-width: 959px) {
+    .menu_main_wrap .menu_main_nav_area { display: none !important; }
+    .menu_main_wrap .menu_main_responsive_button { display: inline-block !important; }
+    .menu_user_wrap { display: none !important; }
+    /* Normalize hamburger placement across all pages */
+    .menu_main_wrap .container { 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        position: relative;
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+    }
+    .menu_main_wrap .logo, 
+    .menu_main_wrap .menu_main { margin: 0 !important; }
+    .menu_main_wrap .menu_main { padding: 0 !important; position: static !important; display: flex; align-items: center; justify-content: flex-end; }
+    .menu_main_wrap .logo img.logo_main { max-height: 44px; height: 44px; width: auto; }
+    .menu_main_wrap .menu_main_responsive_button { 
+        position: absolute !important; 
+        right: 12px !important; 
+        top: 50% !important; 
+        transform: translateY(-50%);
+        float: none !important; 
+        margin: 0 !important; 
+        padding: 0 !important; 
+        line-height: 1 !important; 
+        font-size: 30px; 
+        color: #ffffff; 
+        z-index: 10001;
+    }
+}
+
+/* Make services tab labels smaller */
+.services_section .sc_tabs_titles .theme_button {
+    font-size: 20px;
+    line-height: 1.3;
 }
 
 /* Make embedded maps non-interactive by default */
@@ -55,6 +161,35 @@ body {
 /* Contact section custom background (hero green) */
 .contact_section {
     background-color: #165252; /* matches provided swatch */
+    color: #ffffff;
+}
+
+/* Reusable brand green section (same as homepage/contact) */
+.brand_green_section {
+    background-color: #165252;
+    color: #ffffff;
+    background-repeat: repeat;
+}
+.brand_green_section .sc_content.container {
+    max-width: 990px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.brand_green_section .sc_section.aligncenter { max-width: 950px; margin: 0 auto; padding-top: 20px;}
+.brand_green_section .sc_title,
+.brand_green_section p,
+.brand_green_section a { color: #ffffff; }
+.brand_green_section a:hover { opacity: 0.9; }
+
+/* Brand icon accent styling */
+.brand_icon_wrap {
+    text-align: center;
+    margin: 10px 0 16px;
+}
+.brand_accent_icon {
+    display: inline-block;
+    font-size: 48px;
+    line-height: 1;
     color: #ffffff;
 }
 
@@ -128,5 +263,42 @@ body {
     .contact_section .sc_contact_quicklinks .sc_button.sc_button_style_filled {
         width: 100%;
         max-width: 480px;
+    }
+}
+
+/* Why Us section tweaks */
+.why_us_section .sc_title.sc_title_regular.sc_align_center {
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+.why_us_section .sc_columns .sc_section p {
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+/* Equal-height grid for Why Us to prevent staggered rows */
+.why_us_section .sc_columns.columns_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.why_us_section .sc_columns.columns_wrap .col-sm-3 {
+    display: flex;
+}
+.why_us_section .sc_columns.columns_wrap .col-sm-3 .sc_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 auto;
+}
+.why_us_section .sc_columns .sc_section .sc_icon { margin-bottom: 12px; }
+
+/* Preserve Bootstrap breakpoints while removing floats inside the flex grid */
+@media (min-width: 768px) {
+    .why_us_section .sc_columns.columns_wrap .col-sm-3 {
+        float: none;            /* disable float so flex controls layout */
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
