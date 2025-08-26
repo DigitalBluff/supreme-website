@@ -107,7 +107,7 @@ body {
     .menu_main_wrap .logo, 
     .menu_main_wrap .menu_main { margin: 0 !important; }
     .menu_main_wrap .menu_main { padding: 0 !important; position: static !important; display: flex; align-items: center; justify-content: flex-end; }
-    .menu_main_wrap .logo img.logo_main { padding-top: 10px; max-height: 44px; height: 44px; width: auto; }
+    .menu_main_wrap .logo img.logo_main { margin-top: 10px; max-height: 44px; height: 44px; width: auto; }
     .menu_main_wrap .menu_main_responsive_button {
         position: fixed !important;   /* pin to viewport */
         right: 12px !important;
@@ -120,6 +120,22 @@ body {
         font-size: 30px;
         color: #ffffff;
         z-index: 10010;              /* above header and overlays */
+    }
+
+    /* Force same placement across all pages despite theme's overrides */
+    .responsive_menu .menu_main_responsive_button {
+        position: fixed !important;
+        top: 20px !important;
+        right: 16px !important;
+        left: auto !important;      /* cancel centering rule in responsive.css */
+        transform: none !important;
+        z-index: 10010 !important;
+    }
+    .top_panel_opacity_solid.responsive_menu:not(.user_menu_hide) .menu_main_responsive_button {
+        position: fixed !important;
+        top: 20px !important;
+        right: 16px !important;
+        left: auto !important;
     }
 }
 
