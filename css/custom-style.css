@@ -318,3 +318,31 @@ body {
         max-width: 25%;
     }
 }
+
+/* Hero section CTA button styles */
+.hero_wrap .hero_cta {
+    display:inline-block;
+    padding:14px 28px;
+    font-size:18px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    background-color:#165252;
+    border:2px solid #165252;
+    color:#ffffff;
+    text-decoration:none;
+    /*line-height:1.2;*/
+    border-radius:10px;
+}
+.hero_wrap .hero_cta:hover,
+.hero_wrap .hero_cta:focus {
+    background-color:#1b6a6a;
+    border-color:#1b6a6a;
+    color:#ffffff;
+    text-decoration:none;
+}
+
+/* Mobile responsive adjustments for hero */
+@media (max-width: 767px) {
+    .hero_wrap .hero_title { font-size:32px !important; line-height:1.2; }
+}
