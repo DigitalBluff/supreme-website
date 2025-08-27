@@ -8,13 +8,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico">
-    <title>Supreme Urban Logistics | Just another HTML site</title>
+    <title>Supreme Urban Logistics | Home Page</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" id="packed-css" href="css/_packed.css" type="text/css" media="all">
     <link rel="stylesheet" id="fontello-style-css" href="css/fontello.css" type="text/css" media="all">
     <link rel="stylesheet" id="main-style-css" href="css/main_style.css" type="text/css" media="all">
     <link rel="stylesheet" id="custom-style-css" href="css/custom-style.css" type="text/css" media="all">
-    <style id="custom-style-inline-css" type="text/css"></style>
+    <style id="custom-style-inline-css" type="text/css">
+        .hero_wrap .hero_cta {
+            display:inline-block;
+            padding:16px 36px;
+            font-size:18px;
+            font-weight:600;
+            text-transform:uppercase;
+            letter-spacing:0.05em;
+            background-color:#165252;
+            border:2px solid #165252;
+            color:#ffffff;
+            text-decoration:none;
+            line-height:1.2;
+            border-radius:15px;
+        }
+        .hero_wrap .hero_cta:hover,
+        .hero_wrap .hero_cta:focus {
+            background-color:#1b6a6a;
+            border-color:#1b6a6a;
+            color:#ffffff;
+            text-decoration:none;
+        }
+        @media (max-width: 767px) {
+            .hero_wrap .hero_title { font-size:32px !important; line-height:1.2; }
+        }
+    </style>
     <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <!--<link rel="stylesheet" id="customizer-style-css" href="custom_tools/css/front.customizer.css" type="text/css" media="all">-->
@@ -47,10 +72,13 @@
 
             <section class="hero_wrap">
                 <div class="hero_bg" style="background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/slider/1500x800.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-                    <div class="hero_content" style="height:660px; display:flex; align-items:center; justify-content:center; text-align:center;">
-                        <h1 class="hero_title" style="color:#ffffff; font-size:48px; line-height:1.2; font-weight:600; margin:0; padding:0 20px;">
-                            large enough to handle,<br>small enough to care
+                    <div class="hero_content" style="height:650px; display:flex; align-items:center; justify-content:center; text-align:center; flex-direction:column;">
+                        <h1 class="hero_title" style="color:#ffffff; font-size:48px; line-height:1.2; font-weight:600; margin:0; padding:0 50px;">
+                            "large enough to handle,<br>small enough to care."
                         </h1>
+                        <div style="margin-top:85px;">
+                            <a class="hero_cta" href="#contact">How Can We Help?</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -63,8 +91,12 @@
                             <div class="col-sm-12">
                                 <div class="sc_section">
                                     <div class="sc_content container">
-                                        <div class="sc_section aligncenter" style="padding: 20px 0;">
-                                             <h3 style="font-size: 24px; line-height: 1.5; max-width: 800px; margin: 0 auto; color: #404040; font-weight: 400;">We specialize in being a logistics provider for businesses which require on-demand, dedicated fleets.</h3>
+                                        <div class="sc_section aligncenter" style="padding: 0px 0;">
+                                             <p style="font-size: 24px; max-width: 800px; line-height: 1.5; margin: 0 auto; color: #404040; font-weight: 400;">We specialize in being a logistics provider for businesses which require on-demand, dedicated fleets.</p>
+                                             
+                                        </div>
+                                        <div class="sc_section aligncenter" style="padding-top: 0px 0;">
+                                            <h5 style="padding-top: 10px;">-- Proudly Serving the Tri-State Area</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -438,7 +470,7 @@
                     </div>
                 </section>
 
-                <section class="fullwidth_section contact_section">
+                <section id="contact" class="fullwidth_section contact_section">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12">
