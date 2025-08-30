@@ -35,7 +35,7 @@ THEMEREX_GLOBALS['error_message_box'] = null;
 THEMEREX_GLOBALS['video_resize_inited'] = false;
 THEMEREX_GLOBALS['top_panel_height']        = 0;
 if (THEMEREX_GLOBALS['theme_font']=='') THEMEREX_GLOBALS['theme_font'] = 'Hind';
-THEMEREX_GLOBALS['main_color'] = '#eeba00';
+THEMEREX_GLOBALS['main_color'] = '#7CB342';
 THEMEREX_GLOBALS['accent_color'] = '#5cb9e2';
 THEMEREX_GLOBALS["reviews_allow_user_marks"] = true;
 THEMEREX_GLOBALS["reviews_max_level"] = 100;
