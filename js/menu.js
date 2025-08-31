@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a href="index.html">Home</a>
             </li>
             <li class="menu-item">
-                <a href="about-us.html">About Us</a>
+                <a href="about.html">About</a>
             </li>
             <li class="menu-item">
                 <a href="contacts.html">Contact Us</a>

@@ -1,5 +1,10 @@
 /* CSS-file with custom styles - don't delete this comment */
 
+/* Contact page header image opacity */
+.contact_header_image .top_panel_image_hover {
+    opacity: 0 !important;
+}
+
 /* Homepage section layout tuning */
 
 body {
@@ -11,6 +16,12 @@ body {
     padding-bottom: 0px;
 }
 
+/* Remove blue tint and set opacity for top panel images */
+.top_panel_image_hover {
+    background-color: #000 !important; /* Overriding theme's blue tint */
+    opacity: 0.7 !important;
+}
+
 /* Internal paddings in services tabs */
 .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_wrap {
     padding: 80px 60px 60px 0 !important; /* was 35px 60px 300px 0 */
@@ -18,9 +29,10 @@ body {
 }
 .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_content {
     padding: 80px 80px 40px 0 !important; /* was 200px 70px 50px 0 */
+    margin-top: 40px;
 }
 .services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_titles {
-    margin: 80px 0 0 !important; /* was 125px top */
+    margin: 50px 0 0 !important; /* was 125px top */
 }
 
 /* Tighter spacing between tabs and content on mobile only */
@@ -143,6 +155,11 @@ body {
 .services_section .sc_tabs_titles .theme_button {
     font-size: 20px;
     line-height: 1.3;
+}
+
+/* Reduce spacing between service titles */
+.services_section .sc_tabs.sc_tabs_style_3 .sc_tabs_titles li {
+    margin-bottom: 30px !important; /* Was 35px in main_style.css */
 }
 
 /* Make embedded maps non-interactive by default */
@@ -292,6 +309,10 @@ body {
     line-height: 1.55;
 }
 
+.why_us_section .sc_icon.sc_icon_shape_square {
+    border-color: #165252;
+}
+
 /* Equal-height grid for Why Us to prevent staggered rows */
 .why_us_section .sc_columns.columns_wrap {
     display: flex;
@@ -345,4 +366,12 @@ body {
 /* Mobile responsive adjustments for hero */
 @media (max-width: 767px) {
     .hero_wrap .hero_title { font-size:32px !important; line-height:1.2; }
+}
+
+/* Add horizontal padding to footer on mobile */
+@media (max-width: 767px) {
+    .footer_wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
